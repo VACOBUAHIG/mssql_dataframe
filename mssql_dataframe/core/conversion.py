@@ -881,6 +881,8 @@ def insert_values(
         {params}
     )
     """  # nosec hardcoded_sql_expressions
+
+    print(f'Insert statement {statement}')
     cursor.executemany(statement, values)
     cursor.commit()
 
