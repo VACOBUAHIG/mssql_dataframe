@@ -252,7 +252,7 @@ class insert:
 
         not_nullable = list(schema[~schema["is_nullable"]].index)
 
-        print(f'The insert temp name {temp_name})
+        print(f'The insert temp name {temp_name}')
         self._create.table(
             temp_name, dtypes, not_nullable, primary_key_column=match_columns
         )
