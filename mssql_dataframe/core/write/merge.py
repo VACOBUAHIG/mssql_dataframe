@@ -235,7 +235,7 @@ class merge(insert):
                 + insert_columns
                 + delete_requires
             )
-
+        print (f'Merge statement {statement}')
         # execute statement to perform update in target table using source
         cursor.execute(statement, args)
         temp_name = dynamic.escape(cursor, temp_name)
