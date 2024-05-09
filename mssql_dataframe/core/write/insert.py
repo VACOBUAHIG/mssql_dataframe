@@ -244,7 +244,8 @@ class insert:
         # insert data into source temporary table
         uid = "".join(random.choices(string.ascii_lowercase, k=4))  # nosec B311
         temp_name_upt =  table_name.replace(".", "_")
-        temp_name = f"_source_{temp_name_upt}_{uid}"
+        ##temp_name = f"_source_{temp_name_upt}_{uid}"
+        temp_name = f"_source_temp_name_upt_{uid}"
         columns = list(dataframe.columns)
         if any(dataframe.index.names):
             columns = list(dataframe.index.names) + columns
